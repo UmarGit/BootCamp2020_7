@@ -1,13 +1,68 @@
+@font-face {
+  font-family: 'GT-Walsheim-Pro-Bold';
+  src: local('GT-Walsheim-Pro-Bold'), url(./assets/fonts/GT-Walsheim-Pro-Bold.woff2) format('woff2');
+}
+
+*{
+  --green: #0c8;
+  --blue: #0b4ff1;
+  --yellow: #f9cd39;
+  --purpel: #8853f9;
+  --red: #eb3568;
+  --grey: #878787;
+  --dark-grey: #424242;
+  --black: #010101;
+  --white: #fefefe;
+  font-family: 'GT-Walsheim-Pro-Bold' !important;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(0,0,0, 0.9);
+  color: var(--white);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 6rem;
+  letter-spacing: -0.046em;
+  line-height: 1.05;
+  margin: 0px auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+.MuiButton-label:hover{
+  color: var(--green);
+  transition: all 0.5s ease-in-out;
+}
+
+.makeStyles-title-3:hover{
+  color: var(--red);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 600px){
+  h1 {
+    font-size: 3rem;
+  }
+  .MuiListItem-root{
+    flex-direction: column;
+    font-size: 0.6rem;
+  }
+  .embed p{
+    font-size: 1.6rem;
+  }
 }

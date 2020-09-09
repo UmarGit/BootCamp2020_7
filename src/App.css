@@ -1,38 +1,257 @@
-.App {
+*{
+  --green: #0c8;
+  --blue: #0b4ff1;
+  --yellow: #f9cd39;
+  --purpel: #8853f9;
+  --red: #eb3568;
+  --grey: #878787;
+  --dark-grey: #424242;
+  --black: #010101;
+  --white: #fefefe;
+  --device-padding: 20px;
+  --device-radius: 0.5rem;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+}
+
+.container{
+  width: 90%;
+  margin: 50px auto;
+}
+
+.container2{
+  width: 80%;
+  margin: 50px auto;
+}
+
+.center{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: inherit !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.textYellow{
+  color: var(--yellow);
+  text-shadow: 0px 0px 2px rgba(249, 205, 57, 0.7);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.textRed{
+  color: var(--red);
+  text-shadow: 0px 0px 2px rgba(235, 53, 104, 0.7);
+}
+
+.textGreen{
+  color: var(--green);
+  text-shadow: 0px 0px 2px rgba(0, 204, 136, 0.7);
+}
+
+.textBlue{
+  color: var(--blue);
+  text-shadow: 0px 0px 2px rgba(11, 79, 241, 0.7);
+}
+
+.textPurple{
+  color: var(--purpel);
+  text-shadow: 0px 0px 2px rgba(136, 83, 249, 0.7);
+}
+
+.mainHeadingDescription{
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+video {
+  object-fit: fill;
+}
+
+.animatedDiv{
+  height: 560px;
+  text-align: center;
+  border: 2px solid var(--blue);
+  transform-style: preserve-3d;
+  will-change: transform;
+  overflow: hidden;
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  /* background-color: rgb(32, 32, 32);
+  box-shadow: inset calc(-0.5 * var(--device-padding)) calc(-0.8 * var(--device-padding)) calc(0.5 * var(--device-padding)) rgba(0,0,0,0.18),inset calc(-0.2 * var(--device-padding)) calc(0.5 * var(--device-padding)) var(--device-padding) 0px rgba(255,255,255,0.016),0px calc(0.8 * var(--device-padding)) calc(var(--device-padding) * 2) rgba(0,0,0,0.12),0px var(--device-padding) calc(var(--device-padding) * 4) rgba(0,0,0,0.12); */
+}
+
+.animatedDiv .Top{
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: 0;
+}
+
+.animatedDiv .Section{
+  height: 360px;
+}
+
+.animatedDiv .Left{
+  border-right: 1px solid var(--dark-grey);
+  padding: 10px;
+}
+
+.animatedDiv .Right{
+  border-left: 1px solid var(--dark-grey);
+  padding: 10px;
+}
+
+.animatedDiv .Middle{
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiTypography-displayBlock{
+  font-size: 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.MuiListSubheader-root, .animatedDiv svg{
+  color: var(--red) !important;
+}
+
+.controlsMain{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--device-padding)
+}
+
+.player{
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  background-color: rgb(32, 32, 32);
+  box-shadow: inset calc(-0.5 * var(--device-padding)) calc(-0.8 * var(--device-padding)) calc(0.5 * var(--device-padding)) rgba(0,0,0,0.18),inset calc(-0.2 * var(--device-padding)) calc(0.5 * var(--device-padding)) var(--device-padding) 0px rgba(255,255,255,0.016),0px calc(0.8 * var(--device-padding)) calc(var(--device-padding) * 2) rgba(0,0,0,0.12),0px var(--device-padding) calc(var(--device-padding) * 4) rgba(0,0,0,0.12);
+  width: 10vw;
+  height: 100px;
+}
+
+.playerBig{
+  border: 10px solid var(--red);
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  background-color: rgb(32, 32, 32);
+  box-shadow: 0px 0px 20px 0px rgba(235, 53, 104, 0.7);
+  width: 80vw;
+  height: 60vh;
+}
+
+.scrolly{
+  height: 600px;
+  padding-top: 20vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-bottom: -180px;
+}
+
+.scrollyInner{
+  height: 800px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.description{
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.description h2{
+ font-size: 2rem;
+ text-align: left;
+ padding: 0;
+}
+
+.embed{
+  border: 10px solid var(--yellow);
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  background-color: rgb(32, 32, 32);
+  box-shadow: 0px 0px 20px 0px rgba(249, 205, 57, 0.7);
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.embed p{
+  font-size: 3rem;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.embed p:hover{
+  color: var(--yellow);
+  transition: all 0.3s ease-in-out;
+}
+
+.children{
+  border: 10px solid var(--green);
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  background-color: rgb(32, 32, 32);
+  box-shadow: 0px 0px 20px 0px rgba(0, 204, 136, 0.7);
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.children img{
+  width: 100%;
+  height: 100%;
+}
+.openSource{
+  border: 10px solid var(--blue);
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  background-color: rgb(32, 32, 32);
+  box-shadow: 0px 0px 20px 0px rgba(11, 79, 241, 0.7);
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.openSource:hover{
+  color: var(--black);
+  transition: all 0.3s ease-in-out;
+}
+
+.etgSupport{
+  border: 10px solid var(--purpel);
+  border-radius: calc(var(--device-radius) + var(--device-padding));
+  background-color: rgb(32, 32, 32);
+  box-shadow: 0px 0px 20px 0px rgba(136, 83, 249, 0.7);
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.etgSupport:hover{
+  color: var(--purpel);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 600px){
+  .embed, .playerBig, .children,.openSource, .etgSupport{
+    width: 80vw;
+    height: 40vh;
   }
-  to {
-    transform: rotate(360deg);
+  .embed p, .etgSupport{
+    font-size: 1.2rem;
   }
 }
