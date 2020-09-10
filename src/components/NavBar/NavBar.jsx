@@ -84,20 +84,19 @@ export default function NavBar({elevate}) {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <Button aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
+        <Button aria-label="show 17 new notifications" color="inherit">
+          <b>HOME</b> 
         </Button>
-        <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <Button aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
+        <Button aria-label="show 17 new notifications" color="inherit">
+          <b>ABOUT</b> 
         </Button>
-        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem>
+        <Button aria-label="show 17 new notifications" color="inherit">
+          <b>Contact US</b> 
+        </Button>
       </MenuItem>
     </Menu>
   );
